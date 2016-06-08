@@ -1,5 +1,9 @@
-# Tugas Besar Web Service Kelompok 4 D4TI2C
+# Ionic with Codeigniter Web Service Example
 Aplikasi Repository Data Barang Elektronik menggunakan Web Service
+
+New Features :
+Camera
+Maps
 
 # Anggota Kelompok
 Nama | NPM | Link Github
