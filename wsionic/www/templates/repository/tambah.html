@@ -1,0 +1,19 @@
+<ion-view view-title="Input Data Barang">
+  <ion-content class="padding">
+    <div class="list">
+		<label class="item item-input item-stacked-label">
+			 <span class="input-label">Nama Barang</span>
+			<input type="text" ng-model="repository.nama_barang" placeholder="Masukkan Nama Barang">
+		</label>
+
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Jenis Barang</span>
+			<input type="text" ng-model="repository.jenis_barang" placeholder="Masukkan Jenis Barang">
+		</label>
+
+		<button class="button button-positive button-block" ng-click="simpan(repository);">
+			Save
+        </button>
+	</div>
+  </ion-content>
+</ion-view>

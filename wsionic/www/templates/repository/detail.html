@@ -1,0 +1,49 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{repository.nama_barang}}">
+
+<ion-content class="padding">
+    <h3>Detail :</h3>
+    <p>
+        <font size="3" color="gray" >Nama Barang : {{repository.nama_barang}}</font>
+    <br>
+        <font size="3" color="gray" >Jenis Barang : {{repository.jenis_barang}}</font>
+    </p>
+    <button class="button button-balanced button-block" ng-click="editModal()">Edit Data Barang</button>
+</ion-content>
+<script id="edit.html" type="text/ng-template">
+        <div class="modal">
+            <ion-header-bar class="bar-stable">
+                <button class="button button-icon icon ion-close-circled" ng-click="batal()"></button>
+                <h1 class="title"> Edit Data Barang </h1>
+            </ion-header-bar>
+            <ion-content>
+                <form>
+                    <div class="list">
+                        <label class="item item-input">
+                        <span class="input-label">ID :</span>
+                            <input type="hidden" placeholder="{{repository.id}}" ng-model="repository.id" init-from-form>
+                            <p>{{repository.id}}</p>
+                        </label>
+                        <label class="item item-input">
+                        <span class="input-label">Nama Barang :</span>
+                            <input type="text" placeholder="{{repository.nama_barang}}" ng-model="repository.nama_barang" init-from-form>
+                        </label>
+                        <label class="item item-input">
+                        <span class="input-label">Jenis Barang :</span>
+                            <input type="text" placeholder="{{repository.jenis_barang}}" ng-model="repository.jenis_barang" init-from-form>
+                        </label>
+                        <button class="button button-balanced button-block" ng-click="edit(repository);">
+                            Save
+                        </button>
+                    </div>
+                </form>
+        </ion-content>
+        </div>
+</script>
+
+</ion-view>

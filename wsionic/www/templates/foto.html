@@ -1,0 +1,12 @@
+<ion-view view-title="Foto">
+    <ion-content ng-controller="FotoCtrl" padding="true">
+        <button class="button button-positive button-block" ng-click="takePhoto()">
+            Ambil Foto
+        </button>
+        <button class="button button-positive button-block" ng-click="choosePhoto()">
+            Lihat Foto
+        </button>
+        <center>
+        <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center"></center>
+</ion-content>
+</ion-view>
